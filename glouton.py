@@ -6,12 +6,13 @@ stocks_selection = []
 # stocks_name_list = []
 
 
-with open("actions.csv", "r") as csv_file:
+with open("stocks.csv", "r") as csv_file:
     data = csv.reader(csv_file)
     for row in data:
         if row[1].isdigit():
             profit_cost_ratio = float(row[2]) / 100
             stocks_list.extend([(row[0], int(row[1]), profit_cost_ratio)])
+            # stocks_list.extend([(row[0], int(row[1]), (int(row[1]) * float(row[2])) / 100)])
             stocks_list.sort(key=lambda x: x[2], reverse=True)
 
 

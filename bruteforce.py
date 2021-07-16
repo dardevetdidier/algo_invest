@@ -9,7 +9,7 @@ stocks_list = []
 stocks_selection_list = []
 
 # reads csv file and creates list of stocks
-with open("actions.csv", "r") as data_file:
+with open("stocks.csv", "r") as data_file:
     data = csv.reader(data_file)
     for row in data:
         if row[1].isdigit():
@@ -27,13 +27,11 @@ def max_profit(moneymax, stocks_to_check, stocks_selection=None):
     if stocks_to_check:
         # 1) on n'ajoute pas l'action en privant la liste de la première action
         profit_and_stocks_1, total_invest_1 = max_profit(moneymax, stocks_to_check[1:], stocks_selection)
-        # print(f"profit et actions 1: {profit_and_stocks_1}     cout 1: {total_invest_1}")
 
         # on prend la première action de la liste
         stock = stocks_to_check[0]
-        print(f"action: {stock}")
 
-        #  2) si le cout le cout de l'action < au porte monnaie, on ajoute l'action
+        #  2) si le cout de l'action < au porte-monnaie, on ajoute l'action
         if stock[1] <= moneymax:
             profit_and_stocks_2, total_invest_2 = max_profit(moneymax - stock[1], stocks_to_check[1:],
                                                              stocks_selection + [stock])
@@ -41,6 +39,7 @@ def max_profit(moneymax, stocks_to_check, stocks_selection=None):
             # On garde le bénéfice le plus important
             if profit_and_stocks_1[0] < profit_and_stocks_2[0]:
                 return profit_and_stocks_2, total_invest_2
+
         return profit_and_stocks_1, total_invest_1
 
     # s'il n'y a plus d'acion, la récursivité s'arrete : CAS DE BASE

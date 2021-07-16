@@ -1,26 +1,26 @@
 import csv
 import time
 
+#
+# stocks_cost = [20, 22, 15, 17]
+# stocks_profit = [6.5, 12.6, 7.0, 5.0]
+# stocks_name = ["a1", "a2", "a3", "a4"]
+stocks_cost = []
+stocks_profit = []
+stocks_name = []
 
-stocks_cost = [20, 22, 15, 17]
-stocks_profit = [6.5, 12.6, 7.0, 5.0]
-stocks_name = ["a1", "a2", "a3", "a4"]
-# stocks_cost = []
-# stocks_profit = []
-# stocks_name = []
-
-wallet = 60
+wallet = 500
 
 # stock_list = [("action-1", 20, 6.5), ("action-2", 22, 12.6), ("action-3", 15, 7.0), ("action-4", 17, 5.0)]
 
 # creates list of stocks
-# with open("actions.csv", "r") as data_file:
-#     data = csv.reader(data_file)
-#     for row in data:
-#         if row[1].isdigit():
-#             stocks_cost.append(int(row[1]))
-#             stocks_profit.append((int(row[2]) * int(row[1])) / 100)
-#             stocks_name.append(row[0])
+with open("stocks.csv", "r") as data_file:
+    data = csv.reader(data_file)
+    for row in data:
+        if row[1].isdigit():
+            stocks_cost.append(int(row[1]))
+            stocks_profit.append((int(row[2]) * int(row[1])) / 100)
+            stocks_name.append(row[0])
 
 print(stocks_cost)
 print(stocks_profit)
