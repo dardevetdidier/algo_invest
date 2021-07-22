@@ -7,9 +7,12 @@ def choose_data():
     dataset = ""
     solution_txt = ""
     dataset_choice = ""
-    while not dataset_choice.isdigit() or not 1 <= int(dataset_choice) <= 2:
-        dataset_choice = input("Choose the dataset: 1 or 2 ? ")
-    if dataset_choice == "1":
+    while not dataset_choice.isdigit() or not 0 <= int(dataset_choice) <= 2:
+        dataset_choice = input("Choose the dataset: 0, 1 or 2 ? ")
+    if dataset_choice == "0":
+        dataset = "dataset0.csv"
+        solution_txt = "solution_dataset0.txt"
+    elif dataset_choice == "1":
         dataset = "dataset1.csv"
         solution_txt = "solution_dataset1.txt"
     elif dataset_choice == "2":
@@ -20,7 +23,7 @@ def choose_data():
 
 
 user_choice = choose_data()
-data = user_choice[0]
+data_to_analyse = user_choice[0]
 solution_file = user_choice[1]
 
 
@@ -30,7 +33,7 @@ wallet = 50000
 stocks_list = []
 
 # reads csv file and creates list of stocks
-with open(data, "r") as data_file:
+with open(data_to_analyse, "r") as data_file:
     data = csv.reader(data_file)
     for row in data:
         if not row[1].isalpha():

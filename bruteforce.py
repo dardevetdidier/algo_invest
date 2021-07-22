@@ -9,7 +9,7 @@ stocks_list = []
 stocks_selection_list = []
 
 # reads csv file and creates list of stocks
-with open("stocks.csv", "r") as data_file:
+with open("dataset0.csv", "r") as data_file:
     data = csv.reader(data_file)
     for row in data:
         if row[1].isdigit():
