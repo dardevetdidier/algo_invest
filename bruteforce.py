@@ -16,9 +16,6 @@ with open("stocks.csv", "r") as data_file:
             stocks_list.extend([(row[0], int(row[1]), (int(row[2]) * int(row[1])) / 100)])
 
 
-# print(stocks_list)
-
-
 def max_profit(moneymax, stocks_to_check, stocks_selection=None):
     if not stocks_selection:
         stocks_selection = []
