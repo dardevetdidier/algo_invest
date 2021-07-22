@@ -18,6 +18,17 @@ Deux solutions sont présentées :
 
 * Cloner ce dépôt avec la commande\
   `$ git clone https://github.com/dardevetdidier/algo_invest.git`
+  
+  
+* Créer un environnement virtuel : Depuis un terminal, accéder au répertoire racine du projet
+et utiliser la commande :
+
+    `$ python -m venv venv` 
+
+  
+* Activer l'environnement virtuel :
+
+    `$ source venv/Scripts/activate`
 
   
 * Pour exécuter le fichier bruteforce.py :
