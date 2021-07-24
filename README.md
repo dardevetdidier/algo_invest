@@ -6,7 +6,7 @@ Recherche de solutions pour maximisation d'investissements
 ### Informations générales
 
 Les algorithmes ont été développés avec Python 3.9.2.\
-Les fichiers contenant les données à analysées sont présents dans le dépôt et ne doivent pas être renommés pour assurer 
+Les fichiers contenant les données à analysr sont présents dans le dépôt et ne doivent pas être renommés pour assurer 
 le bon fonctionnement du programme.
 
 Deux solutions sont présentées :
@@ -16,7 +16,7 @@ Deux solutions sont présentées :
 
 ### Comment exécuter les fichiers :
 
-* Cloner ce dépôt avec la commande\
+* Cloner ce dépôt avec la commande
   `$ git clone https://github.com/dardevetdidier/algo_invest.git`
   
   
@@ -28,7 +28,8 @@ et utiliser la commande :
   
 * Activer l'environnement virtuel :
 
-    `$ source venv/Scripts/activate`
+    `$ source venv/Scripts/activate` (Linux et Mac)\
+    `$ venv\Scripts\activate.bat` (Windows)
 
   
 * Pour exécuter le fichier bruteforce.py :
