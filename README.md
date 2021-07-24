@@ -6,7 +6,7 @@ Recherche de solutions pour maximisation d'investissements
 ### Informations générales
 
 Les algorithmes ont été développés avec Python 3.9.2.\
-Les fichiers contenant les données à analysr sont présents dans le dépôt et ne doivent pas être renommés pour assurer 
+Les fichiers contenant les données à analyser sont présents dans le dépôt et ne doivent pas être renommés pour assurer 
 le bon fonctionnement du programme.
 
 Deux solutions sont présentées :
